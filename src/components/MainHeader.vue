@@ -1,17 +1,15 @@
 <template>
   <div class="h-full">
     <header class="w-full flex justify-center items-center mt-auto">
-      <div>
-        <div
-          class="rounded-full h-48 w-48 flex items-center justify-center bg-red-500"
-        >
-          Circle
-        </div>
-      </div>
+      <img
+        src="@/assets/IMG_kqcs3y.jpg"
+        class="rounded-full h-48 w-48"
+        alt="Une belle photo de moi"
+      />
 
       <div class="max-w-2xl mx-16">
         <h1 class="text-3xl">Hey ! I'm <b>Mishaa</b></h1>
-        <p class="my-8 leading-loose text-justify">
+        <p class="my-8 leading-loose text-justify text-paragraph">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
           dolores harum id laudantium neque quia quod repellendus temporibus
           tenetur? Debitis, enim quo? At, incidunt, ut! Laudantium neque quia
@@ -84,8 +82,10 @@
     </header>
   </div>
 </template>
-<script>
-export default {
-  name: "MainHeader"
-};
+<script lang="ts">
+import Vue from "vue";
+import { Component } from "vue-property-decorator";
+
+@Component({})
+export default class MainHeader extends Vue {}
 </script>
