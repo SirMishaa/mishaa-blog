@@ -1,17 +1,28 @@
 <template>
   <nav class="flex px-16 py-6 items-end">
     <div class="flex items-center">
-      <div class="bg-red-600 h-10 block w-10"></div>
-      <h1 class="text-3xl font-black ml-2">
+      <!--<div class="bg-red-600 h-10 block w-10"></div>-->
+      <img
+        class="h-12 w-12 rounded-full"
+        src="../assets/login_space_1.jpg"
+        alt="Logo"
+      />
+      <h1 class="text-3xl font-black ml-4">
         Mishaa
       </h1>
     </div>
 
     <ul class="ml-auto flex text-sm pr-6" style="font-weight: 500">
-      <li><a class="mx-8 active" href="#">Home</a></li>
+      <li>
+        <router-link class="mx-8 active" :to="{ name: 'Homepage' }"
+          >Home</router-link
+        >
+      </li>
       <li><a class="mx-8" href="#">About</a></li>
       <li><a class="mx-8" href="#">Contact</a></li>
-      <li><a class="mx-8" href="#">Login</a></li>
+      <li>
+        <router-link class="mx-8" :to="{ name: 'Login' }">Login</router-link>
+      </li>
       <li>
         <button aria-label="search" class="mx-8" type="button">
           <svg

@@ -1,8 +1,7 @@
 <template>
   <main>
     <Navbar />
-    <MainHeader class="mt-48" />
-
+    <MainHeader class="mt-32" />
     <ArticleSection />
 
     <!-- Todo: Center MainHeader from viewport -->
@@ -12,7 +11,7 @@
 <script>
 import Navbar from "@/components/Navbar";
 import MainHeader from "@/components/MainHeader";
-import ArticleSection from "@/views/ArticleSection";
+import ArticleSection from "@/components/ArticleSection";
 
 export default {
   name: "Home",
