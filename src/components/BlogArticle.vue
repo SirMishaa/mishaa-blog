@@ -5,7 +5,6 @@
         style="width: 11em;"
         class="flex flex-col justify-center items-center h-48"
       >
-        <!--<img src="@/assets/preview.webp" alt="" />-->
         <p style="font-size: 6rem;line-height: 0.8em" class="font-bold">
           25
         </p>
@@ -30,10 +29,14 @@
     </div>
   </article>
 </template>
-<script>
-export default {
-  name: "BlogArticle"
-};
+<script lang="ts">
+import { Component, Prop, Vue } from "vue-property-decorator";
+import ArticleData from "@/types/ArticleData";
+
+@Component
+export default class BlogArticle extends Vue {
+  @Prop() articleData!: ArticleData;
+}
 </script>
 <style scoped lang="scss">
 h1.font-fira-sans {
