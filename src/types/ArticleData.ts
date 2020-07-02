@@ -5,4 +5,7 @@ export default interface ArticleData {
   linkedTo: string;
   isPinned: boolean;
   publishedAt: string;
+  resume: string;
 }
+
+// 25/10/20 14:20:30

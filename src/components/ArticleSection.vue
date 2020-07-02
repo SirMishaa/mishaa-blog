@@ -4,20 +4,24 @@
       <h1 class="font-medium custom text-red-500 ml-6 inline">
         Latest Articles
       </h1>
-      <BlogArticle />
-      <BlogArticle />
+      <Article
+        :article-data="article"
+        :key="article.slug"
+        v-for="article in retrievedArticles"
+      />
     </Container>
   </div>
 </template>
-<script>
-import Container from "@/components/Container";
-import BlogArticle from "@/components/BlogArticle";
+<script lang="ts">
+import Container from "@/components/Container.vue";
+import Article from "@/components/BlogArticle.vue";
+import ArticleData from "@/types/ArticleData";
 
 export default {
   name: "ArticleSection",
-  components: { BlogArticle, Container },
+  components: { Article, Container },
   computed: {
-    retrievedArticles() {
+    retrievedArticles(): Array<ArticleData> {
       return this.$store.state.retrievedArticles;
     }
   },

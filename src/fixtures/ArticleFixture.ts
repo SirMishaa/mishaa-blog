@@ -10,9 +10,10 @@ function generateArticles(howMany = 20): Array<ArticleData> {
         title: Faker.company.catchPhrase(),
         isPinned: Math.random() > 0.5,
         tags: ["#js", "#html", "#vue"],
-        publishedAt: new Date().toString(),
+        publishedAt: Faker.date.recent(60).toString(),
         linkedTo: Faker.internet.domainName(),
-        slug: Faker.company.catchPhrase()
+        slug: Faker.company.catchPhrase(),
+        resume: Faker.lorem.paragraph(3)
       });
     }
   }

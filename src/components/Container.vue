@@ -12,9 +12,9 @@ import { Component, Prop } from "vue-property-decorator";
 
 @Component
 export default class Container extends Vue {
-  @Prop({ type: Boolean, default: false })
-  private debug;
+  @Prop() debug!: boolean;
 
+  // Todo : Rework component, we should be able to specify size for differents size of screen
   get containerClasses(): string | null {
     return this.$props.debug ? "border border-red-500" : null;
   }
